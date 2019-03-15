@@ -3,6 +3,9 @@ title: "PA1"
 author: "Freddy Li"
 output: html_document
 ---
+```{r, cache=TRUE,echo=TRUE}
+library(knitr)
+```
 
 ## Loading and preprocessing the data  
 ```{r,cache=TRUE, echo=TRUE}
