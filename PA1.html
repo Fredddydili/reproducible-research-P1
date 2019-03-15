@@ -288,8 +288,8 @@ diff_median &lt;- round(median_new - median_perday,2)</code></pre>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<div id="create-a-new-factor-variable-in-the-dataset-with-two-levels-weekday-and-weekend-indicating-whether-a-given-date-is-a-weekday-or-weekend-day." class="section level4">
-<h4>1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</h4>
+<div id="create-a-new-factor-variable-in-the-dataset-with-two-levels-a-aweekdaya-and-aweekenda-indicating-whether-a-given-date-is-a-weekday-or-weekend-day." class="section level4">
+<h4>1. Create a new factor variable in the dataset with two levels â€“ â€œweekdayâ€ and â€œweekendâ€ indicating whether a given date is a weekday or weekend day.</h4>
 <pre class="r"><code>updated_data$weekday &lt;- factor(ifelse(weekdays(updated_data$date) %in% c(&quot;Saturday&quot;,&quot;Sunday&quot;),&quot;Weekend&quot;,&quot;Weekday&quot;),levels = c(&quot;Weekend&quot;,&quot;Weekday&quot;))</code></pre>
 </div>
 <div id="make-a-panel-plot-containing-a-time-series-plot-of-the-5-minute-interval-x-axis-and-the-average-number-of-steps-taken-averaged-across-all-weekday-days-or-weekend-days-y-axis." class="section level4">
