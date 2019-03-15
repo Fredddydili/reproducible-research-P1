@@ -190,6 +190,7 @@ $(document).ready(function () {
 </div>
 
 
+<pre class="r"><code>library(knitr)</code></pre>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
 <pre class="r"><code>if(!file.exists(&quot;activity.csv&quot;)){
@@ -215,25 +216,9 @@ str(data)</code></pre>
 ##  Max.   :806.00                      Max.   :2355.0  
 ##  NA's   :2304</code></pre>
 <p>Transform the data into suitable format</p>
-<pre class="r"><code>library(lubridate)</code></pre>
-<pre><code>## 
-## Attaching package: 'lubridate'</code></pre>
-<pre><code>## The following object is masked from 'package:base':
-## 
-##     date</code></pre>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:lubridate':
-## 
-##     intersect, setdiff, union</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>data$date &lt;- ymd(data$date)
+<pre class="r"><code>library(lubridate)
+library(dplyr)
+data$date &lt;- ymd(data$date)
 data &lt;- tbl_df(data)</code></pre>
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
